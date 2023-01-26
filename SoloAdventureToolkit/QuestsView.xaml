@@ -1,0 +1,53 @@
+﻿<UserControl x:Class="SoloAdventureToolkit.QuestsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SoloAdventureToolkit"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Background="AntiqueWhite">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Image Name="Background" Source="Resources/WhiteCliffs.png"  Grid.RowSpan="7" Grid.ColumnSpan="7" Stretch="Fill"></Image>
+        <TextBlock FontSize="30" TextAlignment="Center" Margin="10" Grid.Column="1" FontFamily="Century Schoolbook" Grid.ColumnSpan="5">Quest Generator</TextBlock>
+        <TextBlock Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" FontSize="20" TextAlignment="Center" FontFamily="Century Schoolbook" Margin="15" Background="DarkGray">Problem</TextBlock>
+        <TextBlock Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="3" FontSize="20" TextAlignment="Center" Margin="15" FontFamily="Century Schoolbook" Background="DarkGray">Quest</TextBlock>
+        <TextBlock Grid.Row="1" Grid.Column="4" Grid.ColumnSpan="3" FontSize="20" TextAlignment="Center" Margin="15" FontFamily="Century Schoolbook" Background="DarkGray">Source</TextBlock>
+        <ScrollViewer Grid.Row="2" Grid.RowSpan="4" Grid.ColumnSpan="7" Margin="10" Background="White">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBlock FontSize="12" TextAlignment="Center" TextWrapping="Wrap" Grid.Column="0" Name="ProblemOutput" ></TextBlock>
+                <TextBlock FontSize="12" TextAlignment="Center" TextWrapping="Wrap" Grid.Column="1" Name="QuestOutput"></TextBlock>
+                <TextBlock FontSize="12" TextAlignment="Center" TextWrapping="Wrap"  Grid.Column="2" Name="SourceOutput"></TextBlock>
+
+            </Grid>
+        </ScrollViewer>
+        <Button Name="GenerateQuest" Grid.ColumnSpan="2" Grid.Row="6" Grid.Column="5" Margin="10" Click="GenerateQuest_Click" FontFamily="Century Schoolbook" >Generate Quest</Button>
+        <Button Name="ClearText" Grid.Row="6" Grid.Column="6" Margin="10" Click="ClearText_Click" FontFamily="Century Schoolbook" >Clear</Button>
+        <Button Name="GenVerb" Grid.Row="6" Grid.Column="2" Margin="20,10,20,10" Click="Verb_OnClick_Click" FontFamily="Century Schoolbook" VerticalAlignment="Top" >Verb</Button>
+        <Button Name="Clear_Verb" Grid.Row="6" Grid.Column="2" Margin="20,10,20,10" Click="Clear_Verb_OnClickVerb_Click" FontFamily="Century Schoolbook" VerticalAlignment="Bottom" >Clear Verbs</Button>
+        <TextBlock Name ="Verb" TextAlignment="Center"  Grid.Row="6" Grid.Column="3" Margin="20,10,20,10" FontSize="10" FontFamily="Century Schoolbook" Background="White"></TextBlock>
+        <TextBlock Grid.Row="6" TextAlignment="Center" Margin="10" FontFamily="Century Schoolbook" Grid.ColumnSpan="2" TextWrapping="Wrap" Text="If you generate too many, the formatting gets weird. Just clear and try again!" Background="White"></TextBlock>
+    </Grid>
+</UserControl>

@@ -1,0 +1,30 @@
+Farmer
+Artist
+Herbalist
+Horse trainer
+Blacksmith
+Finesmith
+Blacksmith
+Jeweller
+Entertainer
+Teacher
+Armourer
+Cook
+Tailor
+Ropemaker
+Fletcher
+Miller
+Executioner
+Restauranteur
+Priest/Cultist
+Enginerr
+Scribe
+Soldier
+Banker
+Apothecary
+Woodcutter
+Tax Colelctor
+Prostitute
+Fishmonger
+Butcher
+Fruiterer

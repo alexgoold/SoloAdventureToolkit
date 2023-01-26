@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="SoloAdventureToolkit.AddThings"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SoloAdventureToolkit"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Background="AntiqueWhite">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Image Name="Backgrod" Source="Resources/WhiteCliffs.png"  Grid.RowSpan="7" Grid.ColumnSpan="7" Stretch="Fill"></Image>
+        <TextBlock Grid.ColumnSpan="6" TextAlignment="Center" Margin="10" Text="Add Things" FontSize="30" FontFamily="Century Schoolbook"></TextBlock>
+        <TextBox Name="FirstName"  Grid.Row="2" Grid.Column="0" Margin="15"></TextBox>
+        <TextBlock Grid.Row="1" Grid.Column="0" Margin="10,40,10,10" Text="First Name:" TextAlignment="Center"></TextBlock>
+        <Button Name="AddFirstName" Grid.Row="2" Grid.Column="1" Margin="0,20,80,20" Click="AddFirstName_Click">Add</Button>
+    </Grid>
+</UserControl>

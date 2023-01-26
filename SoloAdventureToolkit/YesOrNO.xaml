@@ -1,0 +1,47 @@
+﻿<UserControl x:Class="SoloAdventureToolkit.YesOrNO"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SoloAdventureToolkit"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Image Name="Image2" Source="Resources/WhiteCliffs.png" Grid.RowSpan="10" Grid.ColumnSpan="10" Stretch="Fill"></Image>
+        <TextBlock Grid.Column="0" Grid.ColumnSpan="5" FontSize="30" TextAlignment="Center" FontFamily="Century Schoolbook">Yes or No</TextBlock>
+        <Button FontSize="8" Name="Impossible" Grid.Row="4" Grid.Column="0" Click="YesOrNo_Click" Margin="10,5,70,5" FontFamily="Century Schoolbook" >Impossible</Button>
+        <Button FontSize="8" Name="HighlyUnlikely" Grid.Row="5" Grid.Column="0" Click="YesOrNo_Click" Margin="10,5,70,5" FontFamily="Century Schoolbook" >Highly Unlikely</Button>
+        <Button FontSize="8" Name="Unlikely" Grid.Row="6" Grid.Column="0" Click="YesOrNo_Click" Margin="10,5,70,5" FontFamily="Century Schoolbook" >Unlikely</Button>
+        <Button FontSize="8" Name="Possible" Grid.Row="7" Grid.Column="1" Click="YesOrNo_Click" Margin="40,5,40,5" FontFamily="Century Schoolbook" >Possible</Button>
+        <Button FontSize="8" Name="Likely" Grid.Row="4" Grid.Column="2" Click="YesOrNo_Click" Margin="70,5,10,5" FontFamily="Century Schoolbook" >Likely</Button>
+        <Button FontSize="8" Name="HighlyLikely" Grid.Row="5" Grid.Column="2" Click="YesOrNo_Click" Margin="70,5,10,5" FontFamily="Century Schoolbook" >Highly Likely</Button>
+        <Button FontSize="8" Name="ACertainty" Grid.Row="6" Grid.Column="2" Click="YesOrNo_Click" Margin="70,5,10,5" FontFamily="Century Schoolbook" >A Certainty</Button>
+        <TextBlock Name ="YesOrNo"  Grid.Row="4" Grid.Column="0" Grid.RowSpan="3" Grid.ColumnSpan="3" Background="White" FontSize="48" TextAlignment="Center" Margin="120,10,120,10"></TextBlock>
+        <ScrollViewer Grid.Row="2" Grid.Column="3" Grid.RowSpan="6" Grid.ColumnSpan="2" Background="White" Margin="20">
+            <TextBlock Name="YesNoResults"></TextBlock>
+        </ScrollViewer>
+        <TextBlock TextAlignment="Center" FontSize="16" Grid.Row="1" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="3" Text ="Pose a Yes/No question&#x0a;Determine the likelyhood&#x0a;Choose the appropriate button" Margin="100,20,100,0" FontFamily="Century Schoolbook"></TextBlock>
+        <TextBlock Grid.Row="1" Grid.Column="3" Grid.ColumnSpan="2" FontSize="15" TextAlignment="Center" Margin="0,20,0,0" FontFamily="Century Schoolbook">Result History</TextBlock>
+        <Button Grid.Row="8" Grid.Column="9" Name="ClearYesNo" Click="ClearYesNo_OnClick_Click" FontFamily="Century Schoolbook" Margin="5">Clear</Button>
+            
+    </Grid>
+</UserControl>
